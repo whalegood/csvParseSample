@@ -1,0 +1,192 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbdb7d8e99, pid=9092, tid=13004
+#
+# JRE version:  (11.0.1+13) (build )
+# Java VM: OpenJDK 64-Bit Server VM (11.0.1+13, mixed mode, aot, sharing, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x1e8e99]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Program Files\Java\apache-maven-3.6.3\bin\..\bin\m2.conf -Dmaven.home=C:\Program Files\Java\apache-maven-3.6.3\bin\.. -Dlibrary.jansi.path=C:\Program Files\Java\apache-maven-3.6.3\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\akdnt\eclipse\csvParseSample org.codehaus.plexus.classworlds.launcher.Launcher clean install
+
+Host: Intel(R) Core(TM) i3-8145U CPU @ 2.10GHz, 4 cores, 3G,  Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+Time: Mon Mar 29 19:53:00 2021 대한민국 표준시 elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000287c498f800):  JavaThread "Unknown thread" [_thread_in_vm, id=13004, stack(0x000000d382c00000,0x000000d382d00000)]
+
+Stack: [0x000000d382c00000,0x000000d382d00000],  sp=0x000000d382cfed40,  free space=1019k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x1e8e99]
+V  [jvm.dll+0x1e7343]
+V  [jvm.dll+0x373fdb]
+V  [jvm.dll+0x738049]
+V  [jvm.dll+0x3e357d]
+V  [jvm.dll+0x3e58e1]
+C  [java.exe+0x3603]
+C  [java.exe+0x1746c]
+C  [KERNEL32.DLL+0x17034]
+C  [ntdll.dll+0x52651]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0x0000000000000000
+
+
+Registers:
+RAX=0x0000e48e410ef305, RBX=0x0000000000000000, RCX=0x0000000000000000, RDX=0x0000000000000006
+RSP=0x000000d382cfed40, RBP=0x0000000000000000, RSI=0x00000287c498f800, RDI=0x0000000000000000
+R8 =0x0000000000000006, R9 =0x0000000000000006, R10=0x0000000000000006, R11=0x000000d382cfe5a0
+R12=0x0000000000000000, R13=0x00007ffbdbbd5af0, R14=0x00000287c30fe528, R15=0x000000d382cff798
+RIP=0x00007ffbdb7d8e99, EFLAGS=0x0000000000010256
+
+Top of Stack: (sp=0x000000d382cfed40)
+0x000000d382cfed40:   00000287c3108b50 00007ffc4eddbbf0
+0x000000d382cfed50:   000000d382cff798 00000287c30fe528
+0x000000d382cfed60:   0000000000000000 0000000000000400
+0x000000d382cfed70:   0000df4bf376ef1e 00007ffbdbbd5af0
+0x000000d382cfed80:   0000000000000000 000000d382cff798
+0x000000d382cfed90:   00000287c30fe528 00007ffbdbbd5af0
+0x000000d382cfeda0:   0000000000000000 00007ffc2b250000
+0x000000d382cfedb0:   00007ffbdbe613f8 0000000000000000
+0x000000d382cfedc0:   00007ffbdb7d71e7 00007ffc4ee11d2c
+0x000000d382cfedd0:   0000000000000000 00007ffbdbc5314d
+0x000000d382cfede0:   0000e48e410ef305 00000287c30fe528
+0x000000d382cfedf0:   00007ffb00000000 00007ffbdbbd5af0
+0x000000d382cfee00:   00000287c498f800 000000d382cfef20
+0x000000d382cfee10:   0000000000000000 00007ffbdb7d7343
+0x000000d382cfee20:   00007ffc2e810000 00007ffc2b25cfcc
+0x000000d382cfee30:   000000d382cfef20 00000287c498f800 
+
+Instructions: (pc=0x00007ffbdb7d8e99)
+0x00007ffbdb7d8e79:   b8 00 00 00 48 8b 05 4c 30 85 00 48 33 c4 48 89
+0x00007ffbdb7d8e89:   84 24 a0 00 00 00 48 8b e9 48 83 cb ff 48 ff c3
+0x00007ffbdb7d8e99:   80 3c 0b 00 75 f7 33 f6 c6 44 24 30 01 40 38 35
+0x00007ffbdb7d8ea9:   52 51 88 00 74 17 40 38 35 33 b8 87 00 75 0e 33 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000287c30fe3c0, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbdbd2cded]
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+
+[error occurred during error reporting (printing compressed oops mode), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffbdbd42587]
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff688ef0000 - 0x00007ff688f35000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\java.exe
+0x00007ffc51670000 - 0x00007ffc51865000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffc51430000 - 0x00007ffc514ed000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffc4edb0000 - 0x00007ffc4f079000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffc50b80000 - 0x00007ffc50d20000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffc4f080000 - 0x00007ffc4f0a2000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffc512e0000 - 0x00007ffc5130a000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffc4f460000 - 0x00007ffc4f56b000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffc4f1c0000 - 0x00007ffc4f25d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffc4f310000 - 0x00007ffc4f410000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffc3c630000 - 0x00007ffc3c8ca000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.844_none_ca00b6081b84eb1d\COMCTL32.dll
+0x00007ffc4fc20000 - 0x00007ffc4fcbe000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffc50de0000 - 0x00007ffc50e10000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffc30110000 - 0x00007ffc30126000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\vcruntime140.dll
+0x00007ffc19890000 - 0x00007ffc1993a000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\msvcp140.dll
+0x00007ffbdb5f0000 - 0x00007ffbdc131000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\server\jvm.dll
+0x00007ffc51230000 - 0x00007ffc512dc000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffc50ae0000 - 0x00007ffc50b7c000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffc51500000 - 0x00007ffc5162b000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffc50e10000 - 0x00007ffc50e18000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffc37f70000 - 0x00007ffc37f79000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffc3fbe0000 - 0x00007ffc3fc07000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffc50a60000 - 0x00007ffc50acb000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffc44a60000 - 0x00007ffc44a6a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffc4d690000 - 0x00007ffc4d6a2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffc2fd80000 - 0x00007ffc2fd91000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\verify.dll
+0x00007ffc4cc20000 - 0x00007ffc4ce04000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffc4c2d0000 - 0x00007ffc4c2fc000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffc4f260000 - 0x00007ffc4f2e0000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffc2b250000 - 0x00007ffc2b278000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\java.dll
+0x00007ffc2e810000 - 0x00007ffc2e826000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\zip.dll
+0x00007ffc484a0000 - 0x00007ffc484aa000 	C:\Program Files\OpenJDK\jdk-11.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\OpenJDK\jdk-11.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.844_none_ca00b6081b84eb1d;C:\Program Files\OpenJDK\jdk-11.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files\Java\apache-maven-3.6.3\bin\..\bin\m2.conf -Dmaven.home=C:\Program Files\Java\apache-maven-3.6.3\bin\.. -Dlibrary.jansi.path=C:\Program Files\Java\apache-maven-3.6.3\bin\..\lib\jansi-native -Dmaven.multiModuleProjectDirectory=C:\Users\akdnt\eclipse\csvParseSample 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher clean install
+java_class_path (initial): C:\Program Files\Java\apache-maven-3.6.3\bin\..\boot\plexus-classworlds-2.6.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+    uintx GCDrainStackTargetSize                   = 64                                        {product} {ergonomic}
+   size_t InitialHeapSize                          = 63742464                                  {product} {ergonomic}
+   size_t MaxHeapSize                              = 1019879424                                {product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool UseCompressedClassPointers               = true                                 {lp64_product} {ergonomic}
+     bool UseCompressedOops                        = true                                 {lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags
+ #1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\OpenJDK\jdk-11.0.1
+PATH=C:\Program Files\Java\apache-maven-3.6.3\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\iCLS\;C:\Program Files\Intel\Intel(R) Management Engine Components\iCLS\;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Common Files\Adobe\AGL;C:\Program Files\ojdkbuild\java-11-openjdk-11.0.10-1\bin;C:\Program Files\Git\cmd;"C:\Program Files\OpenJDK\jdk-11.0.1\bin;";C:\Users\akdnt\anaconda3;C:\Users\akdnt\anaconda3\Library\mingw-w64\bin;C:\Users\akdnt\anaconda3\Library\usr\bin;C:\Users\akdnt\anaconda3\Library\bin;C:\Users\akdnt\anaconda3\Scripts;C:\Users\akdnt\AppData\Local\Microsoft\WindowsApps;C:\Program Files (x86)\ESTsoft\ALSee\x64
+USERNAME=akdnt
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 142 Stepping 11, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 19041 (10.0.19041.804)
+
+CPU:total 4 (initial active 4) 
+
+Memory: 4k page, system-wide physical 3890M (426M free)
+TotalPageFile size 12148M (AvailPageFile size 1720M)
+current process WorkingSet (physical memory assigned to process): 8M, peak: 8M
+current process commit charge ("private bytes"): 3M, peak: 3M
+
+vm_info: OpenJDK 64-Bit Server VM (11.0.1+13) for windows-amd64 JRE (11.0.1+13), built on Oct  6 2018 13:18:13 by "mach5one" with MS VC++ 15.5 (VS2017)
+
+END.
