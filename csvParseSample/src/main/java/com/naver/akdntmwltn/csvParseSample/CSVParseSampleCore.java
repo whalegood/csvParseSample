@@ -9,7 +9,7 @@ public class CSVParseSampleCore
 	public static void main(String[] args) throws Exception
 	{
 		EQDataLoader loader = new EQDataLoader();
-		loader.storeData(CSVParseSampleCore.class.getResourceAsStream("/csvParseSample"));
+		loader.storeData(CSVParseSampleCore.class.getResourceAsStream("/sample.csv"));
 		@SuppressWarnings({ "unchecked", "rawtypes" })
 		String result = (String) loader.getData().stream().map(new Function() {
 			public Object apply(Object d) {
