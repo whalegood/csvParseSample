@@ -1,4 +1,4 @@
-package csvParseSample;
+package com.naver.akdntmwltn.csvParseSample;
 
 import lombok.Getter;
 import lombok.Setter;

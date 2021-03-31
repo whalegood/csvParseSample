@@ -1,5 +1,5 @@
 
-package csvParseSample;
+package com.naver.akdntmwltn.csvParseSample;
 
 import java.util.function.Function;
 import java.util.stream.Collectors;

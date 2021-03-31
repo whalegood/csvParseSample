@@ -1,4 +1,4 @@
-package csvParseSample;
+package com.naver.akdntmwltn.csvParseSample;
 
 
 

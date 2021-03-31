@@ -1,4 +1,4 @@
-package csvParseSample;
+package com.naver.akdntmwltn.csvParseSample;
 
 import java.io.File;
 import java.io.FileWriter;
